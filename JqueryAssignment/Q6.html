@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table {
+            width: 50vw;
+            margin-left: 10vw;
+            margin-top: 20vh;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="3">
+        <tr id="row1">
+            <td>1</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr id="row2">
+            <td>2</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr id="row3">
+            <td>3</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+    </table>
+    <div style="margin: 50px 50px;">
+        <button id="button1">Add row</button>
+        <div>
+            Enter row number to delete:
+            <textarea id="in" style="vertical-align: middle;"></textarea>
+            <button id="button2">delete</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(()=>{
+                var i = 4;
+                $("#button1").click(()=>{
+                    $("table").append(`<tr id = "row${i}">
+                <td>${i++}</td>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>`)
+            });
+            $("#button2").click(()=>{
+                var va = $("#in").val();
+                $(`#row${va}`).remove()
+            });
+        });
+    </script>
+</body>
+</html>	

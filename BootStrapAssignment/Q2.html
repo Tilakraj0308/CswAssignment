@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css
+/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.
+js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+</script>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["username"].value;
+  if (x == "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+$(document).ready(function(){
+  $(".b4").click(function(){
+    alert("Do you save your data");
+
+  });
+});
+</script>
+
+<style>
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+</head>
+<body style="background:lightgray">
+  <button class="b4" style="float:right; color:red ;cursor: pointer;">x</button>
+  <div class="container">
+  <img src="soa.png" witdth="100px" height="100px" class="center">
+  <b><h2 align="center">Registration</h2></b>
+  <form action="/action_page.php" name="myForm"
+  onsubmit="return validateForm()" method="post" required>
+
+  <div class="form-group">
+  <label for="username">User Name</label>
+  <input type="username" class="form-control" id="username" placeholder= "Type Your Full Name" name="username">
+  </div>
+
+  <div class="form-group">
+  <label for="email">Email Address</label>
+  <input type="email" class="form-control" id="email" placeholder= "Type Your Email Address" name="email">
+  </div>
+
+  
+
+  <div class="form-check form-check-inline">
+    <label class="form-check-label" for="gender">Gender:- </label> 
+  <input class="form-check-input" type="radio" name="gender" id="gender" value="femle">
+  <label class="form-check-label" for="gender">Female</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+  <label class="form-check-label" for="gender">Male</label>
+</div>
+<br><br>
+ 
+
+  <div class="form-group ">
+      <label for="city">City</label>
+      <select id="city" class="form-control">
+        <option selected>Bhubaneswar</option>
+        <option>Ranchi</option>
+        <option>Jamshedpur</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+<label for="pwd">Password</label>
+<input type="password" class="form-control" id="pw" placeholder="Type Your Password" name="password">
+</div>
+
+<div class="form-group">
+  <button class="form-control btn-warning" >Sign Up</button>
+  </div>
+
+</form>
+</body>
+</html>

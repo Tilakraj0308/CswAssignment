@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<div><button id="button1">slideDown</button></div>
+			<div id = "hidden1" style="width: 80vw; height: 6vh; display: none; background: yellowgreen;">This is a slidedown effect</div>
+		</li>
+		<li>
+			<div><button id = "button2">animate</button></div>
+		</li>
+		<li>
+			<div><button id = "button3">fadeIn</button></div>
+			<div id = "hidden2" style="width: 80vw; height: 6vh; display: none; background: yellowgreen;">This is a FadeIn effect</div>
+		</li>
+		<li>
+			<div><button id = "button4">show</button><button id = "button5">hide</button></div>
+			<div id = "hidden3" style="width: 80vw; height: 6vh; display: none; background: yellowgreen;">This is a example of Hide and Show effect</div>
+		</li>
+		<li>
+			<div><button id = "button6">mouseenter</button></div>
+		</li>
+		<li>
+			<div><button id = "button7">dblclick</button></div>
+		</li>
+		<li>
+			<div><button id = "button8">mouseleave</button></div>
+		</li>
+		<li>
+			<div><p style="width: 70vw; margin: 0px;"><button id = "button9">attr</button></p></div>
+		</li>
+		<li>
+			<div><button id = "button10">html</button></div>
+		</li>
+	</ul>
+	
+	<script>
+		$("#button1").click(function(){
+			$("#hidden1").slideDown();
+		});
+		$("#button2").click(function(){
+			$("#button2").animate({
+				marginLeft : "90vw"
+			} , 1000 , ()=>{
+				$("#button2").animate({
+				marginLeft : "0vw"
+			},1000)
+			});
+		});
+		$("#button3").click(function(){
+			$("#hidden2").fadeIn();
+		});
+		$("#button4").click(function(){
+			$("#hidden3").show();
+		});
+		$("#button5").click(function(){
+			$("#hidden3").hide();
+		});
+		$("#button6").mouseenter(function(){
+			alert("Mouse entered!!")
+		});
+		$("#button7").dblclick(function(){
+			alert("Double clicked!!")
+		});
+		$("#button8").mouseleave(function(){
+			alert("Mouse leaved!!");
+		});
+		$("#button9").click(function(){
+			$("#button9").parent().attr("align" , "center");
+		});
+		$("#button10").click(function(){
+			$("#button10").html("Html added")
+		});
+	</script>
+</body>
+</html>

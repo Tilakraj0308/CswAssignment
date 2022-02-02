@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <body>
+   
+    
+      <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<script>
+
+var xValues = ["Sunny day", "Rainy day", "cloudy day", "windy", "snowy"];
+var yValues = [1, 4, 6, 2, 7];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "7 day weather telecast"
+    }
+  }
+});
+
+
+      </script>
+      
+       <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+       <script>
+         var xArray=["Italy" , "France" , "spain" , "USA"," Argentina"]
+         var yArray = [55, 49, 44, 24, 15];
+         var pieColors = ["red", "green","blue","orange","brown"];
+         new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: pieColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "7 day weather telecast"
+    }
+  }
+});
+
+         </script>
+   
+  </body>
+</html>

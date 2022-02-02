@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h2 onclick="hell()">
+		Click here!!!
+	</h2>
+	<h3 id = "til">
+	</h3>
+	<script>
+			function hell() {
+				  var txt;
+				  if (confirm("Press a button!")) {
+				    txt = "You pressed OK!";
+				  } else {
+				    txt = "You pressed Cancel!";
+				  }
+				  document.getElementById("til").innerHTML = txt;
+			}
+	</script>
+</body>
+</html>
